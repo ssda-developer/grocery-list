@@ -1,0 +1,211 @@
+:root {
+    --radius: 0.5rem;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease-in-out;
+    --ff-base: "Roboto", sans-serif;
+    --color-black: #222222;
+    --color-danger-bg: #f8d7da;
+    --color-danger-text: #721c24;
+    --color-grey-dark: #334155;
+    --color-grey-light: #f1f5f8;
+    --color-grey-medium: #e2e8f0;
+    --color-primary: #49a6e9;
+    --color-primary-dark: #186fa8;
+    --color-red: #e63946;
+    --color-red-dark: #c1121f;
+    --color-success-bg: #d4edda;
+    --color-success-text: #155724;
+    --color-white: #ffffff;
+    --max-width: 35rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--color-grey-light);
+    color: var(--color-grey-dark);
+    font-family: var(--ff-base);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.grocery {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem 1rem;
+}
+
+.grocery__wrapper {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: var(--max-width);
+    padding: 2rem;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.grocery__form {
+    position: relative;
+}
+
+.grocery__title {
+    color: var(--color-primary-dark);
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.grocery__alert {
+    border-radius: var(--radius);
+    font-size: 0.8rem;
+    left: 50%;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    text-align: center;
+    top: -2rem;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.grocery__alert--success {
+    background: var(--color-success-bg);
+    color: var(--color-success-text);
+}
+
+.grocery__alert--danger {
+    background: var(--color-danger-bg);
+    color: var(--color-danger-text);
+}
+
+.grocery__form-control {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.grocery__input {
+    background: var(--color-grey-light);
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    flex: 1;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.button {
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+
+.button--primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.button--primary:hover {
+    background: var(--color-primary-dark);
+}
+
+.button--clear {
+    background: transparent;
+    border-color: var(--color-red);
+    color: var(--color-red);
+}
+
+.button--clear:hover {
+    background: var(--color-red-dark);
+    border-color: var(--color-red-dark);
+    color: var(--color-white);
+}
+
+.grocery__clear-btn {
+    display: block;
+    margin: 1.5rem auto 0;
+}
+
+.grocery__container {
+    display: none;
+    margin-top: 2rem;
+}
+
+.grocery__container--visible {
+    display: block;
+}
+
+.grocery__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.grocery__item {
+    align-items: center;
+    background: var(--color-grey-light);
+    border: 1px dashed transparent;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.grocery__item:hover {
+    background: var(--color-grey-medium);
+}
+
+.grocery__item--editing {
+    background: #e0f0ff;
+    border-color: var(--color-primary-dark);
+}
+
+.grocery__item-title {
+    font-size: 1rem;
+    margin: 0;
+    word-break: break-all;
+}
+
+.grocery__btn-container {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.grocery__edit-btn,
+.grocery__delete-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    transition: var(--transition);
+}
+
+.grocery__edit-btn {
+    color: var(--color-primary);
+}
+
+.grocery__edit-btn:hover {
+    color: var(--color-primary-dark);
+}
+
+.grocery__delete-btn {
+    color: var(--color-red);
+}
+
+.grocery__delete-btn:hover {
+    color: var(--color-red-dark);
+}
